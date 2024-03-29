@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corne</title>
+    <style>
+        * { margin: 0; padding: 0;}
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            position: relative;
+            top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            /* border: 2px solid red; */
+            height: 90vh;
+            width: 90vw;
+            box-sizing: border-box;
+            /* -webkit-transform: perspective(100px) rotateX(45deg); */
+            /* overflow: hidden; */
+        }
+        .corne{
+            background-image: url("corne.png");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            height: 170px;
+            width: 300px;
+            animation: deplace 2s linear infinite;
+        }
+        @keyframes deplace {
+            0%{
+                transform: translateX(-100%) rotate(0deg) scale(0.1);
+            }
+            30%{
+                transform: translateY(-100%) translateX(10%) rotate(90deg) scale(0.5);
+            }
+            70%{
+                transform: translateY(90%) translateX(100%) rotate(180deg) scale(0.8);
+            } 
+            100%{                
+                transform: translateY(-50%) translateX(-100%) rotate(360deg) scale(0.5);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="corne">
+
+        </div>
+    </div>
+</body>
+</html>

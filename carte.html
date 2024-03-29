@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 70vh;
+            width: 70vw;
+            background-color: rgb(86, 190, 86);
+        }
+        .carte{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 100px;
+            padding: 60px;
+            width: 60px;
+            border-radius: 8px;
+            background-color: white;
+            box-sizing: border-box;
+            animation: rotation 2s linear infinite normal;
+        }
+
+        @keyframes rotation {
+            
+            40%{transform: rotateX(-90deg) ;}
+            60%{transform: rotateY(10deg) ;}
+            70%{transform: rotateY(90deg) ;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="carte">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacite</title>
+    <style>
+        * { margin: 0; padding: 0;}
+
+        .container{
+            position: relative;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .text{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            height: 30px;
+            width: 300px;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+            z-index: 1;
+        }
+        .carres{
+            position: absolute;
+            height: 25%;
+            width: 100%;
+            bottom: 0;
+            background-color: transparent;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .carres div{
+            position: relative;
+            height: 25px;
+            width: 25px;
+            background-color: gray;
+            animation: voler 10s linear infinite ;
+        }
+        .carres div:nth-child(1){
+            padding: 10px;
+        }
+        .carres div:nth-child(2){
+            animation-delay: 3s;
+            bottom: -60%;
+        }
+        .carres div:nth-child(3){
+            animation-delay: 1s;
+            padding: 10px;
+            bottom: -60%;
+        }
+        .carres div:nth-child(4){
+            animation-delay: 3s;
+            bottom: -60%;
+        }
+        .carres div:nth-child(5){
+            animation-delay: 3s;
+            padding: 10px;
+            bottom: -60%;
+        }
+        .carres div:nth-child(6){
+            animation-delay: 6s;
+            padding: 10px;
+            bottom: -60%;
+            transform: translateX(-30%);
+        }
+        .carres div:nth-child(7){
+            animation-delay: 6.8s;
+            bottom: -60%;
+        }
+        .carres div:nth-child(8){
+            animation-delay: 7s;
+            padding: 10px;
+            bottom: -60%;
+        }
+        
+
+        @keyframes voler {
+            0%  {transform: translateY(25vh) rotate(-180deg);}
+            20%{opacity: 0.7;}
+            50%  {transform: translateY(-50vh);opacity:0.5;}
+            100%  {transform: translateY(-100vh) rotate(180deg);opacity:0.1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">BACKGROUND ANIMATION</div>
+        <div class="carres">
+            <div class="carre1"></div>
+            <div class="carre2"></div>
+            <div class="carre3"></div>
+            <div class="carre4"></div>
+            <div class="carre5"></div>
+            <div class="carre6"></div>
+            <div class="carre7"></div>
+            <div class="carre8"></div>
+            <div class="carre9"></div>
+            <div class="carre10"></div>
+        </div>
+        <div class="opa1"></div>
+        <div class="opa2"></div>
+        <div class="opa3"></div>
+        <div class="opa4"></div>
+    </div>
+</body>
+</html>

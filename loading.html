@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            min-height: 100vh;
+            
+        }
+        
+        h2{
+            position: relative;
+            color: black;
+            font-size: 5vw;
+            font-weight: bold;
+            letter-spacing: 8px;
+            -webkit-text-stroke: 0.1vw #383d52;
+        }
+        h2::before{
+            position: absolute;
+            content: attr(data-text);
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: orange;
+            -webkit-text-stroke: 0vw #383d52;
+            border-right: 2px solid orange;
+            animation: Changecolor 5s linear infinite;
+            overflow: hidden;
+        }
+
+        @keyframes Changecolor {
+            
+            0%{
+                widht:0 ;
+            }
+            50%{
+                width: 100%;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2 data-text="LOADING..">LOADING..</h2>
+</body>
+</html>

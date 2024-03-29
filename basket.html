@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 70vh;
+            width: 70vw;
+            background-color: black;
+        }
+        .basket{
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-image: url("basket.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            padding: 40px;
+            top: 70%;
+            animation: zongle .7s ease-out 0.5s infinite reverse ;
+        }
+
+        @keyframes zongle {
+            
+            70%{transform: translateY(-45vh);}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="basket"></div>
+    </div>
+</body>
+</html>

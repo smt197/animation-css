@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balancoir</title>
+    <style>
+        * { margin: 0; padding: 0;}
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 90vh;
+            width: 90vw;
+            box-sizing: border-box;
+        }
+        .barre{
+            position: absolute;
+            height: 0.1%;
+            width: 40%;
+            background-color: white;
+            transform: rotate(35deg);
+            animation: rotation 2s linear  infinite;
+        }
+        .barre::after{
+            content: "";
+            position: absolute;
+            background-color: white;
+            padding: 20px;
+            bottom: 0%;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            animation: rotateBall 2s linear  infinite;
+        }
+
+        @keyframes rotation {
+           50%{
+                transform: rotate(-15deg);
+           }
+           50%{
+                transform: rotate(-35deg);
+           }
+        }
+        @keyframes rotateBall {
+            50%{
+                transform: translateX(100%) rotate(360deg);
+           }
+           50%{
+                transform: translateX(900%) rotate(360deg);
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="barre"></div>
+        <div class="ballon"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettre</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .container{
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            height: 70vh;
+            width: 70vw;
+            background-color: red;
+            /* overflow: hidden; */
+        }
+        .content1{
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-image: url("folder.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 40px;
+            top: 70%;
+            left: 20px;
+        }
+        .content2{
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-image: url("folder2.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 40px;
+            top: 70%;
+            right: 260px;
+        }
+        .papier{
+            position: absolute;
+            bottom: 20%;
+            left: 27px;
+            height: 60px;
+            width: 60px;
+            background-image: url("papier.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            animation: envoi 4s linear infinite ;
+
+        }
+    @keyframes envoi {
+        0% {
+            transform: rotate(0deg) translateY(0px);
+        }
+        30% {
+            transform: rotate(90deg) translateY(-40vh) rotate(180deg) translateX(8vw);
+        }
+        90% {
+            transform: rotate(180deg) translateY(-57vh) translateX(30vw);
+        }
+        100% {
+        transform: rotate(0deg) translateY(0) translateX(30vw); 
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="papier"></div>
+        <div class="content1"></div>
+        <div class="content2"></div>
+    </div>
+</body>
+</html>
